@@ -1,0 +1,9 @@
+book_filename: "determining-magnitude-measures-molecules"
+new_session: true
+before_chapter_script: _common.R
+delete_merged_file: true
+rmd_files: ["index.Rmd", "töö-eesmärgid.Rmd", "töövahendid.Rmd", "teoreetiline-osa.Rmd"]
+language:
+  ui:
+    #chapter_name: !expr function(i) paste0(i, '. fejezet')
+    chapter_name: "Osa "
