@@ -1,42 +1,21 @@
-# Töövahendid
+# Töö vahendid
 
-## Kehalised vahendid
+1. Kaks dünamomeetrit,
 
-1. Suure pinnaga küvett,
+2. tugev nöör,
 
-2. talk koos puisturiga,
+3. raudvarb,
 
-3. kastoorõli,
+4. koormiste komplekt,
 
-4. alusklaas õlitilga hoidmiseks,
+5. vineertahvel,
 
-5. nõel,
+6. mõõtejoonlaud,
 
-6. analüütilised kaalud,
+7. mall,
 
-7. filterpaber,
+8. sirkel,
 
-8. pintsetid,
+9. valgusallikas (taskulamp vms),
 
-9. mõõtejoonlaud,
-
-10. umbes 1.5 * l vett (soovitatavalt destilleeritud),
-
-11. aknapesuvedelik või piiritus.
-
-## Konstandid
-
-### Molaarmassid
-
-$$M_{H} = 1.008 \cdot \frac{g}{mol} = 1.008 \cdot 10^{-3} \cdot \frac{kg}{mol}$$
-
-$$M_{C} = 12.011 \cdot \frac{g}{mol} = 1.2011 \cdot 10^{-2} \frac{kg}{mol}$$
-
-$$M_{O} = 15.999 \cdot \frac{g}{mol} = 1.5999 \cdot 10^{-2} \cdot \frac{kg}{mol}$$
-
-```{r}
-```
-
-### Avogadro arv
-
-$$N_A = 6.022 \cdot 10^{23} \cdot \frac{1}{mol}$$
+10. viltpliiats või marker.
