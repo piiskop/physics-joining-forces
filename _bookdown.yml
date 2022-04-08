@@ -3,7 +3,7 @@ new_session: true
 before_chapter_script: _common.R
 delete_merged_file: true
 rmd_files: ["index.Rmd", "töö-eesmärgid.Rmd", "töövahendid.Rmd", "teoreetiline-osa.Rmd", "töö-käik.Rmd", "küsimused-vastused.Rmd"]
-language:
-  ui:
+#language:
+  #ui:
     #chapter_name: !expr function(i) paste0(i, '. fejezet')
-    chapter_name: "Osa "
+    #chapter_name: "Osa "
