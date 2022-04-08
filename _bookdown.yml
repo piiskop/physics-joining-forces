@@ -6,4 +6,4 @@ rmd_files: ["index.Rmd", "töö-eesmärgid.Rmd", "töövahendid.Rmd", "teoreetil
 #language:
   #ui:
     #chapter_name: !expr function(i) paste0(i, '. fejezet')
-    #chapter_name: "Osa "
+    ##chapter_name: "Osa "
