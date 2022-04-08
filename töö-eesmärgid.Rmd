@@ -1,5 +1,5 @@
 # Töö eesmärgid
 
-1. Tutvuda molekulid emõõtmete suurusjärgu eksperimentaalse määramise (Languir') meetodiga.
+1. Tutvuda molekulide mõõtmete suurusjärgu eksperimentaalse määramise (Languir') meetodiga.
 
 2. Hinnata riitsinusõli (kastoorõli) molekulide lineaarmõõtmeid.

@@ -2,7 +2,7 @@ bookdown::bs4_book:
   css: bs4_style.css
   theme:
     primary: "#096B72"
-  repo: https://github.com/rstudio/bookdown-demo
+  repo: https://github.com/piiskop/determining-magnitude-measures-molecules
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
@@ -10,3 +10,5 @@ bookdown::pdf_book:
   citation_package: natbib
   keep_tex: yes
 bookdown::epub_book: default
+bookdown::word_document2:
+  always_allow_html: true

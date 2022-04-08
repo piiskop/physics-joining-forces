@@ -1,5 +1,7 @@
 # Töövahendid
 
+## Kehalised vahendid
+
 1. Suure pinnaga küvett,
 
 2. talk koos puisturiga,
@@ -21,3 +23,20 @@
 10. umbes 1.5 * l vett (soovitatavalt destilleeritud),
 
 11. aknapesuvedelik või piiritus.
+
+## Konstandid
+
+### Molaarmassid
+
+$$M_{H} = 1.008 \cdot \frac{g}{mol} = 1.008 \cdot 10^{-3} \cdot \frac{kg}{mol}$$
+
+$$M_{C} = 12.011 \cdot \frac{g}{mol} = 1.2011 \cdot 10^{-2} \frac{kg}{mol}$$
+
+$$M_{O} = 15.999 \cdot \frac{g}{mol} = 1.5999 \cdot 10^{-2} \cdot \frac{kg}{mol}$$
+
+```{r}
+```
+
+### Avogadro arv
+
+$$N_A = 6.022 \cdot 10^{23} \cdot \frac{1}{mol}$$

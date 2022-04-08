@@ -1,0 +1,57 @@
+# Töö käik
+
+Sisendandmete kogumise teostasime koos, väljundite tuletamise eraldi:
+
+1.  Puhastasime küveti rasva lahustava vedelikuga (piiritus). Hõõrusime seda piiritusega niisutatud lapiga. Valasime küvetti toatemperatuuril (18 - 20°C) (soovitatavalt destilleeritud) vett. Puistasime veepinna keskossa talki.
+
+2.  Tilgutasime eelnevalt piiritusega puhastatud klaasitükile pipetiga ühte kohta 2 ... 3 tilka õli. Puhastasime nõela piiritusega ja kastsime selle seejärel õlitilga keskkohta (põhjani). Nõela teraviku ja koos selle külge jäänud õliga puudutasime keskelt talgiga kaetud veepinda. Õlitilk valgus laiali ja tekitas veepinnale sõõri... *not*. Ei tekitanud. Juhendaja soovitusel tühjendasime küveti ja täitsime uuesti, sedapuhku õrnemalt talki puistates. Seejärel valgus küll laiali.
+
+3.  Mõõtejoonlaua abil määrasime õlilaigu kaks, teineteisega risti olevat diameetrit, $D_1$ ja $D_2$ ning leidsime nende aritmeetilise keskmise $D_{kesk}$. NB! Katset tuleb korrata, kui õlitilk vee pinnal laiali ei valgu või teeb seda vaid mõne sentimeetri ulatuses. Nojah, nii meil alul juhtuski. Mõõtmistulemused kandsime tabelisse \@ref(tab:determining-magnitude-measures-molecules).
+
+```{r determining-magnitude-measures-molecules, tidy=TRUE, tidy.opts=list(width.cutoff=50)}
+columns = c("$\\bf{Katse\\ nr.}$", "$\\bf{D_1\\ (m)}$", "$\\bf{D_2\\ (m)}$", "$\\bf{D_{kesk}\\ (m)}$", "$\\bf{m_1\\ (kg)}$", "$\\bf{m_2\\ (kg)}$", "$\\bf{n}$", "$\\bf{m\\ (kg)}$", "$\\bf{S_m\\ (m^2)}$", "$\\bf{h\\ (m)}$", "$\\boldsymbol{\\sigma\\ (m)}$")
+id <- c(paste(1:2, ".", sep = ""))
+d_1 <- c(9.2e-2, 17.7e-2)
+d_2 <- c(5e-2, 20e-2)
+d_mean <- c(mean(c(d_1[1], d_2[1])), mean(c(d_1[2], d_2[2])))
+m_1 <- c(.11854e-3, .24867e-3)
+m_2 <- c(.1213e-3, .25176e-3)
+n <- c(20, 20)
+m <- (m_2 - m_1) / n
+s_m <- pi * d_mean^2 * (MOLAR_MASS_C * 8 + MOLAR_MASS_H * 35 + MOLAR_MASS_O * 3) / (4 * m * AVOGADRO)
+h <- 4 * m / (pi * DENSITY_CASTOR_OIL * d_mean^2)
+effective_diameter <- signif(sqrt(s_m), digits <- 5)
+determining_magnitude_measures_molecules <- data.frame("id" <-  id, "d_1" <- d_1, "d_2" <- d_2, "d_mean" <- d_mean, "m_1" <- m_1, "m_2" <- m_2, "n" <- n, "m" <- m, "s_m" <- s_m, "h" <- h, "effective_diameter" <- effective_diameter)
+if (knitr::opts_knit$get('rmarkdown.pandoc.to') == "docx") {
+  library(flextable)
+  flextable(determining_magnitude_measures_molecules)
+} else {
+  library(kableExtra)
+  saveRDS(object = determining_magnitude_measures_molecules, "determining.rds")
+  colnames(determining_magnitude_measures_molecules) <- columns
+  kbl(determining_magnitude_measures_molecules, escape = F, caption = "Molekulide mõõtmete suurusjärgu määramine", digits = 24) %>% kable_styling(bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"), latex_options = "scale_down")
+}
+```
+
+4.  Veepinnale valgunud õlitilga massi *m* tegime kindlaks järgmiselt: kaalusime analüütilistel kaaludel .1 \* mg täpsusega filterpaberi. Vastava mõõtesuuruse tähis on $m_1$. NB! Paberi tõstmiseks kasutatakse piiritusega puhastatud pintsette. Nii ka tegime. Seejärel kastsime nõela teraviku õlitilga sisse samal viisil kui varem, kuid nõelateraviku külge jäänud õlitliga pühkisime filterpaberile. NB! Sea tegevust kordasime vähemalt 20 korda. Pärast seda kaalusime filterpaberi uuesti ja tähistasime vastavat suurust kui $m_2$.
+
+5.  Ühe õlitilga massi *m* leidmiseks lahutasin paberi kogumassist $m_2$ filterpaberi esialgse massi $m_1$ ja saadud tulemuse jagasin paberile puhastatud õlitilkade arvuga *n*.
+
+6.  Leidsin õli molekuli ristlõike pindala $S_m$ valemi \@ref(eq:area-cross-section-molecule-by-mass) abil ja molekuli pikkuse *h* valemi \@ref(eq:height) põhjal. Arvestasin, et riitsinusõli tihedus on $\rho = 970 \cdot \frac{kg}{m^3}$. Molaarmassi leidmiseks kasutasin riitsinusõli keemilist valemit $C_8H_{35}O_3$.
+
+7.  Saadud tulemuse järgi arvutasin riitsinus- ehk kastoorõli molekuli efektiivdiameeter $\sigma$ (vaata \@ref(fig:molecular-level)) arvestades ligikaudset seost \@ref(eq:effective-diameter):
+
+```{=tex}
+\begin{equation}
+\sigma^2 \approx S_m \rightarrow \sigma \approx \sqrt{S_m}
+(\#eq:effective-diameter)
+\end{equation}
+```
+8.  **Tegime sama katse läbi teist korda.**
+
+9.  Hindasin katse õnnestumist võrreldes saadud tulemust kirjandusest leitud molekulide mõõtmetega.
+
+10. Võrdlesin enda poolt saadud tulemust ka vesiniku aatomi läbimõõduga (mitu korda on meie poolt leitud molekuli läbimõõt suurem vesiniku aatomi läbimõõdust).
+
+Esmalt sain Ristost erinevad tulemused. Minu viga oli molaarmasside ühikute teisendamata jätmine arvutusteks.
+

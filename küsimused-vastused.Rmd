@@ -1,0 +1,26 @@
+# Küsimused ja vastused
+
+1.  **Milline on molekulide lineaarmõõtmete suurusjärk meie katse põhjal?**
+
+    $$10^{-10} \cdot m$$
+
+2.  **Milline on aatomite ja molekulide mõõtmete suurusjärk kirjanduse põhjal? Kas meie poolt saadud mõõtmiste tulemused on kooskõlas teiste allikate andmetega?**
+
+    Kastoorõli kohta molekulvalemiga $C_8H_{35}O_3$ ei leidnud me mitte ühtki kirjandusallikat. Tundub, et ülesande püstituses on tehtud viga ja süsiniku aatomeid on kümne võrra rohkem [@castor-oil]. Riitsinusõli aatomite ja molekulide mõõtmete kohta ei leidnud me kirjandusest üldse mitte midagi. Benjamin Franklin olevat 1770-ndates aastates kallanud teelusika täie oliiviõli tiigi pinnale ja hinnanud, et laialivalgunud õli katnud poole aakri suuruse tiigi pinna, millest järeldanud arvutuste kaudu, et oliiviõli molekuli läbimõõdu suurusjärk olevat $10^{-9} \cdot m$ [@diameter-molecule]. Meie arvutatud suurusjärk on sinnakanti.
+    
+3.  **Mis võib põhjustada meie tulemuste erinevuse teistest allikatest? Kuidas on võimalik parandada katse läbiviimise korrektsust?**
+
+    Üheks põhjuseks võib olla viga ülesande püstituses, mis paistab seisnevat süsiniku aatomite vales arvus riitsinusõli molekulis. Laseme teostada efektiivdiameetri arvutamise valemi põhjal, milles on süsiniku aatomeid 18:
+    
+    ```{r checking}
+determining <- readRDS("determining.rds")
+effective_diameter <- sqrt(pi * determining$`X.d_mean.....d_mean`^2 *
+                             (MOLAR_MASS_C * 18 + MOLAR_MASS_H * 35 +
+                                MOLAR_MASS_O * 3) /
+                             (4 * determining$`X.m.....m` * AVOGADRO))
+    ```
+
+    Kui süsiniku aatomeid oleks 18 riitsinusõli molekulis, siis meie esimese katse põhjal oleks riitsinusõli molekuli läbimõõt `r signif(effective_diameter[1], digits <- 5)` * m ja teise katse põhjal `r signif(effective_diameter[2], digits <- 5)` * m. Nii et veidi suurem oleks läbimõõt võrreldes kaheksa süsiniku aatomiga molekulis.
+    
+    Katse läbiviimises me eksimusi ei tuvastanud.
+    
