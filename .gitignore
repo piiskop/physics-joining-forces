@@ -8,3 +8,9 @@ _bookdown_files/
 *.rds
 *.pdf
 *.gz
+*.bbl
+*.bcf
+*.lof
+*.lot
+*.run.xml
+*.toc

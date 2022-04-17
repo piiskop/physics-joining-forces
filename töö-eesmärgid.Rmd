@@ -1,5 +1,5 @@
 # Töö eesmärgid
 
-1. Õppida opereerima jõudude näitlike kujutistega.
+1.  Õppida opereerima jõudude näitlike kujutistega.
 
-2. Uurida katseliselt jõudude kui vektorite liitmist.
+2.  Uurida katseliselt jõudude kui vektorite liitmist.

@@ -2,13 +2,21 @@ bookdown::bs4_book:
   css: bs4_style.css
   theme:
     primary: "#096B72"
-  repo: https://github.com/piiskop/determining-magnitude-measures-molecules
+  repo: https://github.com/piiskop/physics-joining-forces
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
   latex_engine: xelatex
-  citation_package: natbib
+  #citation_package: natbib
   keep_tex: yes
+  template: template.tex
 bookdown::epub_book: default
 bookdown::word_document2:
   always_allow_html: true
+  template: template.tex
+pdf_document:
+  template: template.tex
+  pandoc_args: [
+      "-r", "markdown-auto_identifiers"
+      ]
+  number_sections: false

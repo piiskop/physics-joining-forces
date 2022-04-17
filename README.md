@@ -1,1 +1,1 @@
-Tallinna Ülikooli soojusõpetuse praktikumi peacecop kalmeri: ja Risto Koori raport alumiiniumpulga soojuspikenemise uurimise kohta.
+Tallinna Ülikooli mehaanika praktikumi peacecop kalmeri: ja Risto Koori raport jõudude liitmise kohta.

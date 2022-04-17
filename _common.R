@@ -9,7 +9,8 @@ knitr::opts_chunk$set(
   tidy.opts=list(width.cutoff=60),
   tidy=TRUE
   )
-
+knitr::opts_chunk$set(out.height = "\\textheight",  out.width = "\\textwidth",
+                      out.extra = "keepaspectratio=true")
 include_svg = function(path) {
   if (knitr::is_latex_output()) {
     output = xfun::with_ext(path, 'pdf')

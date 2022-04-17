@@ -1,5 +1,5 @@
-book_filename: "determining-magnitude-measures-molecules"
+book_filename: "physics-joining-forces"
 new_session: true
 before_chapter_script: _common.R
 delete_merged_file: true
-rmd_files: ["index.Rmd", "töö-eesmärgid.Rmd", "töövahendid.Rmd", "katseseadmete-skeemid.Rmd", "teoreetiline-osa.Rmd", "töö-käik.Rmd", "küsimused-vastused.Rmd"]
+rmd_files: ["index.Rmd", "töö-eesmärgid.Rmd", "töövahendid.Rmd", "katseseadmete-skeemid.Rmd", "töö-käik.Rmd", "99-references.Rmd"]

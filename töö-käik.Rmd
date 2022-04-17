@@ -1,5 +1,19 @@
 # Töö käik
 
+## Teoreetilised alused
+
+Kuna jõud on vektoriaalne suurus, siis on jõul nii väärtus kui suund. Vektoreid saab liita. Sihitisele mõjuva koondjõu vektor on sellele sihitisele mõjuvate jõudude vektorite summa. Kui ese on taustsüsteemi suhtes paigal, siis on sellele esemele selles taustsüsteemis mõjuvate jõudude summa null. Kui jõud mõjuvad samasihiliselt, on nende vektoreid lihtne liita: tuleb need vaid nihutada samale sirgele niimoodi, et iga järgmise jõu vektori alguspunkt ühtib eelmise jõu vektori lõpppunktiga. Selleks ei pea vektorid isegi mitte samasihilised olema.
+
+Siinses töös käsitleme vektoreid tasandil. Kui vektorid on üksteisega risti, saab nende resultantvektori pikkuse arvutada Pythagorase teoreemi abil. Kui vektorid pole üksteisega risti, siis kui on teada nende ühendatud kahe vektori vaheline nurk, saab kasutada resultantvektori pikkuse arvutamiseks koossinusteoreemi. Eks Pythagorase teoreem olegi koossinusteoreemi erijuht! Seetõttu esitan siinkohal koossinusteoreemi (\@ref(thm:koossiinusteoreem)):
+
+```{theorem koossiinusteoreem, name="Koossiinusteoreem"}
+Kolmnurga külje pikkus on võrdne ruutjuurega selle kolmnurga teiste külgede pikkuste ruutude ning nende teiste külgede pikkuste ja nende vahelise nurga koosinuse kahekordse korrutise vastandarvu summast. [@koossiinusteoreem]
+```
+
+
+
+
+
 Sisendandmete kogumise teostasime koos, väljundite tuletamise eraldi:
 
 1.  Puhastasime küveti rasva lahustava vedelikuga (piiritus). Hõõrusime seda piiritusega niisutatud lapiga. Valasime küvetti toatemperatuuril (18 - 20°C) (soovitatavalt destilleeritud) vett. Puistasime veepinna keskossa talki.
