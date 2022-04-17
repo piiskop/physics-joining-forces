@@ -22,12 +22,13 @@
 \documentclass[
 	a4paper, % Paper size, specify a4paper (A4) or letterpaper (US letter)
 	12pt, % Default font size, specify 10pt, 11pt or 12pt
+	onecolumn
 ]{CSUniSchoolLabReport}
 \usepackage{csquotes}
 %\addbibresource{sample.bib} % Bibliography file (located in the same folder as the template)
 \titleformat*{\section}{\LARGE\sffamily\bfseries}
 \titleformat*{\subsection}{\Large\sffamily\bfseries}
-\titleformat*{\subsubsection}{\large\sffamily\bfseries}
+\titleformat*{\subsubsection}{\large\sffamily\bfseries\hyphenchar\font=-1}
 %----------------------------------------------------------------------------------------
 %	REPORT INFORMATION
 %----------------------------------------------------------------------------------------
@@ -39,7 +40,8 @@
 \date{\today} % Date of the report
 \bibliography{sample}
 %----------------------------------------------------------------------------------------
-
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 % From {rticles}
 $if(csl-refs)$
 \newlength{\csllabelwidth}
@@ -130,6 +132,7 @@ $body$
 %----------------------------------------------------------------------------------------
 %
 \bibliography{sample}
+\bibliography{packages}
 %\printbibliography % Output the bibliography
 %----------------------------------------------------------------------------------------
 

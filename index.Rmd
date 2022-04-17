@@ -31,9 +31,3 @@ lang: et
 link-citations: yes
 #subtitle: LABORATOORNE TÖÖ 1
 ---
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```

@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    sodipodi:docname="katseseadme-skeem-rööpsete-jõudude-liitmiseks.svg"
-   inkscape:version="1.2-alpha1 (1:1.2.0-alpha1+devel+202204072350+ddb812eeff)"
+   inkscape:version="1.3-dev (1:1.2.0-alpha1+devel+202204132350+02aa2bd1a1)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.2696952"
-     inkscape:cx="215.79983"
-     inkscape:cy="93.329488"
+     inkscape:zoom="2.5393904"
+     inkscape:cx="233.91441"
+     inkscape:cy="114.00374"
      inkscape:window-width="1920"
      inkscape:window-height="1147"
      inkscape:window-x="1920"
@@ -247,6 +247,13 @@
        height="4.2397738"
        x="75.754105"
        y="82.431625" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2994-1-6-3"
+       width="2.908808"
+       height="4.2397738"
+       x="145.07469"
+       y="68.810379" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:1, 1, 1;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
        d="M 76.693909,69.185339 V 64.043898"
@@ -269,16 +276,9 @@
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.788572;stroke-dasharray:0.788572, 0.788572;stroke-dashoffset:0;stroke-opacity:1"
        d="m 77.20988,64.686258 2.421004,-3.024279"
        id="path7149-7-2-3" />
-    <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect2994-8"
-       width="6.8002486"
-       height="9.9117975"
-       x="143.12898"
-       y="69.6838" />
     <g
        id="g7175-9"
-       transform="translate(101.48749)">
+       transform="translate(101.48749,-0.58936362)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.02867;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          d="M 44.52701,69.185339 V 64.043898"

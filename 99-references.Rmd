@@ -34,3 +34,9 @@ This is just for testing with more citations for the bibliography at the end.  A
 nocite: | 
   @angel2000, @angel2001, @angel2002a
 ...
+```{r include=TRUE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

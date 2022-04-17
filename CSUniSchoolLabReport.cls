@@ -38,8 +38,7 @@
 \setlength{\parindent}{0pt} % Suppress paragraph indentation
 
 \usepackage{graphicx} % Required for including images
-\graphicspath{{Figures/}{./}} % Specifies where to look for included images (trailing slash required)
-
+\usepackage{booktabs, tabularx, setspace, tabu}
 \usepackage{float} % Allows more precisely positioning floats e.g. \begin{figure}[H]
 
 \usepackage{mhchem} % Package for chemical equation typesetting
@@ -71,7 +70,7 @@
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
-
+\usepackage{float} 
 \usepackage{apacite}
 \bibliographystyle{apacite}
 %\usepackage{biblatex}
@@ -120,6 +119,28 @@
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[estonian]{babel}
-\usepackage{titlesec}
 \usepackage{titling}
 \usepackage{setspace}
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.15}
+\renewcommand{\floatpagefraction}{.66}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{4}
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
+\makeatletter
+% Make all figure use 'h' position by default:
+\def\fps@table{h}
+\makeatother
+\usepackage{hyphenat}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+\usepackage[nobottomtitles]{titlesec}

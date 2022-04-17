@@ -1,9 +1,0 @@
-# Katseseadmete skeemid
-
-```{r setting-up-test-device, fig.cap = "Katseseadme ülesseadmine."}
-include_svg("katseseadme-ülesseadmine.svg")
-```
-
-```{r schema-joining-parallel-forces, fig.cap = "Katseseadme skeem rööpsete jõudude liitmiseks."}
-include_svg("katseseadme-skeem-rööpsete-jõudude-liitmiseks.svg")
-```
