@@ -1,0 +1,9 @@
+# Andmeanalüüs
+
+Andmeanalüüsi tegin mina, peacecop kalmer:, üksi. Kui arvutustulemuste koht on kas tabelis *\@ref(tab:comparing-theoretical-forces-to-actual-applied-to-same-point)* või *\@ref(tab:parallel-forces)*, siis need arvutused on näidatud vahetult enne vastavat tabelit.
+
+Andmeanalüüs esimese praktilise osa kohta:
+
+1. Arvutasin raskusjõu ehk tasakaalustava jõu $P = m \cdot g$ (raskuse kaalu) arvväärtuse ja kandsin selle tabelisse *\@ref(tab:comparing-theoretical-forces-to-actual-applied-to-same-point)*.
+
+2. Valisin sobiva mastaabi $1 \cdot 10^{-2} \cdot m = 1 N$ ja kandsin joonisele õige pikkusega lõigud (vektorite $\overrightarrow{F}$, $\overrightarrow{Q}$, $\overrightarrow{P}$) pikkused, mis vastavad dünamomeetri näidule. Kirjutasin juurde mastaabi, st mitu pikkusühikut olen võtnud vastavaks ühele njuutonile.

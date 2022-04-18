@@ -13,6 +13,8 @@ Siinses töös käsitleme vektoreid tasandil. Kui vektorid on üksteisega risti,
 Kolmnurga külje pikkus on võrdne ruutjuurega selle kolmnurga teiste külgede pikkuste ruutude ning nende teiste külgede pikkuste ja nende vahelise nurga koosinuse kahekordse korrutise vastandarvu summast. [@koossiinusteoreem]
 ```
 
+Üks vektoriaalne suurus on gravitatsioonist tingitud standardkiirendus. Korduvates katsetes aastates 1995 - 2017 mõõdeti selleks Suurupis iga kord $9.8182 \cdot \frac{m}{s^2}$ [@oja2021absolute].
+
 ## Töö sisu
 
 ### Praktiline osa 1: Samas punktis rakendatud erisihiliste vektorite liitmisreegli katseline kinnitamine

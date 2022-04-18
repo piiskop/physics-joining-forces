@@ -21,8 +21,4 @@ include_svg = function(path) {
   knitr::include_graphics(output)
 }
 
-MOLAR_MASS_H <- 1.008E-3
-MOLAR_MASS_C <- 1.2011E-2
-MOLAR_MASS_O <- 1.5999E-2
-AVOGADRO <- 6.022E23
-DENSITY_CASTOR_OIL <- 970
+g <- 9.8182
