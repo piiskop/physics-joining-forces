@@ -18,11 +18,11 @@ m <- c(1, 2)
 f <- c(4, 8)
 q <- c(8, 16)
 alpha <- c(68, 59)
-r_eksp <- c("", "")
-r_teor <- c('', '')
+r_eksp <- c(10.2, 0)
+r_teor <- sqrt(f^2 + q^2 + 2 * f * q * cos(alpha))
 p <- c(m[1] * g, m[2] * g)
-relative_difference_r_eksp_r_teor = c('', '')
-relative_difference_r_eksp_p = c("", "")
+relative_difference_r_eksp_r_teor = abs(r_eksp - r_teor) / r_teor
+relative_difference_r_eksp_p = abs(r_eksp - p) / r_eksp
 same_point_different_lines <- data.frame(
   "id" <-  id,
   "m" <- m,
@@ -30,9 +30,9 @@ same_point_different_lines <- data.frame(
   "q" <- q,
   "alpha" <- alpha,
   "r_eksp" <- r_eksp,
-  "r_teor" <- r_teor,
+  "r_teor" <- sapply(r_teor, signif, digits <- 3),
   "p" <- p,
-  "relative_difference_r_eksp_r_teor" <- relative_difference_r_eksp_r_teor,
+  "relative_difference_r_eksp_r_teor" <- sapply(relative_difference_r_eksp_r_teor, signif, digits <- 3),
   "relative_difference_r_eksp_p" <- relative_difference_r_eksp_p
 )
 if (knitr::opts_knit$get('rmarkdown.pandoc.to') == "docx") {
@@ -47,13 +47,13 @@ if (knitr::opts_knit$get('rmarkdown.pandoc.to') == "docx") {
     format = "latex",
     booktabs = TRUE,
     escape = FALSE,
-    caption = "Samas punktis rakendatud erisihiliste vektorite katse andmed",
-    digits = 24
+    caption = "Samas punktis rakendatud erisihiliste vektorite katse andmed. Paremaks ülevaatlikkuseks on väärtused vajadusel ümardatud kolme tüvenumbrini",
+    digits = 3
   ) %>% kable_styling(
     bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"),
     latex_options = "scale_down",
     full_width = TRUE
-  ) %>% column_spec(1, width = "1cm") %>% column_spec(9, width = "2cm") %>% column_spec(10, width = "2cm")
+  ) %>% column_spec(1, width = ".5cm") %>% column_spec(9, width = "2cm") %>% column_spec(10, width = "2cm")
 }
 ```
 

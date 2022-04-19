@@ -1,6 +1,3 @@
-```{r, echo=FALSE, results='asis'}
-cat("\\twocolumn")
-```
 # Töö käik
 
 ## Teoreetilised alused
@@ -13,7 +10,24 @@ Siinses töös käsitleme vektoreid tasandil. Kui vektorid on üksteisega risti,
 Kolmnurga külje pikkus on võrdne ruutjuurega selle kolmnurga teiste külgede pikkuste ruutude ning nende teiste külgede pikkuste ja nende vahelise nurga koosinuse kahekordse korrutise vastandarvu summast. [@koossiinusteoreem]
 ```
 
+```{r adding-vectors, fig.cap = "Jõuvektorite liitmine", fig.margin = TRUE}
+include_svg(file.path("adding-vectors.svg"))
+```
+
+Joonisel *\@ref(fig:adding-vectors)* on esitatud vektorid $\overrightarrow{F}$ ja $\overrightarrow{Q}$, mis on liidetud vektoriks $\overrightarrow{R}$. Vektori $\overrightarrow{R}$ pikkuse saame arvutada nende liidetavate vektorite pikkuste ja nendevahelise nurga koosinuse abil, kui need vektorid eelnevalt üksteisele otsa järjestada geomeetriliselt. Lõik *AC* on sama pikk kui lõik *OB*, sest need on sama rööpküliku vastasküljed. Seega on $\overrightarrow{AC}$ sama mis $\overrightarrow{Q}$. Koosinusteoreemi rakendamiseks on vajalik kahe külje ja nende vahelise nurga suuruste teadmine. Kui see teadmine on olemas, saab arvutuse teostada. Kuna rööpküliku lähisnurkade summa on 180°, siis valem summavektori pikkuse arvutamiseks on selline:
+
+```{=tex}
+\begin{flalign}
+|\overrightarrow{R}| & = \sqrt{|\overrightarrow{F}|^2 + |\overrightarrow{Q}|^2 - 2 \cdot |\overrightarrow{F}|^2 \cdot |\overrightarrow{Q}|^2 \cdot cos(180° - \alpha)} &\\
+& = \sqrt{|\overrightarrow{F}|^2 + |\overrightarrow{Q}|^2 + 2 \cdot |\overrightarrow{F}|^2 \cdot |\overrightarrow{Q}|^2 \cdot cos(\alpha)}
+(\#eq:cosine-theorem)
+\end{flalign}
+```
+
 Üks vektoriaalne suurus on gravitatsioonist tingitud standardkiirendus. Korduvates katsetes aastates 1995 - 2017 mõõdeti selleks Suurupis iga kord $9.8182 \cdot \frac{m}{s^2}$ [@oja2021absolute].
+```{r, echo=FALSE, results='asis'}
+#cat("\\twocolumn")
+```
 
 ## Töö sisu
 
@@ -35,7 +49,7 @@ Kolmnurga külje pikkus on võrdne ruutjuurega selle kolmnurga teiste külgede p
 
 8. Eraldasime paberilehe vineerplaadilt ja ühendasime joonlaua abil punktid *AO*, *BO* ja *CO*, st ühendasime joonlaua abil nööride lõikumispunkti (jõudude rakenduspunkti) *O* punktidega *A*, *B* ja *C*. Saime sirged, mis näitavad jõudude $\overrightarrow{F}$, $\overrightarrow{Q}$ ja $\overrightarrow{P} = m \cdot \overrightarrow{g}$ suunda.
 
-9. Mõõtsime nurga $\alpha$ malli abil.
+9. Mõõtsime vektorite $\overrightarrow{F}$ ja $\overrightarrow{Q}$ vahelise nurga $\alpha$ malli abil.
 
 10. Kordasime katset teistsuguse tasakaalustava jõu ja nurga $\alpha$ korral. Katseandmed kandsime tabeli *\@ref(tab:comparing-theoretical-forces-to-actual-applied-to-same-point)* sisu teise ritta.
 
@@ -57,5 +71,5 @@ Kolmnurga külje pikkus on võrdne ruutjuurega selle kolmnurga teiste külgede p
 
 Sisendandmed mõõtsime ja salvestasime käsitsi.
 ```{r, echo=FALSE, results='asis'}
-cat("\\onecolumn")
+#cat("\\onecolumn")
 ```
