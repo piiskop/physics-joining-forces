@@ -2,4 +2,4 @@ book_filename: "physics-joining-forces"
 new_session: false
 before_chapter_script: _common.R
 delete_merged_file: true
-rmd_files: ["index.Rmd", "töö-eesmärgid.Rmd", "töövahendid.Rmd", "katseseadme-ülesseadmine/katseseadmete-skeemid.Rmd", "töö-käik.Rmd", "mõõtmistulemused.Rmd", "andmeanalüüs.Rmd", "99-references.Rmd"]
+rmd_files: ["index.Rmd", "töö-eesmärgid.Rmd", "töövahendid.Rmd", "katseseadme-ülesseadmine/katseseadmete-skeemid.Rmd", "töö-käik/töö-käik.Rmd", "andmeanalüüs.Rmd", "küsimused-vastused.Rmd", "99-references.Rmd"]

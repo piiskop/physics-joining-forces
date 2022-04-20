@@ -1,26 +1,117 @@
-# Küsimused ja vastused
+# Vastused küsimustele
 
-1.  **Milline on molekulide lineaarmõõtmete suurusjärk meie katse põhjal?**
+1.  **Sõnastada koossiinusteoreem (koos valemiga).**
 
-    $$10^{-10} \cdot m$$
+    Koossiinusteoreem \@ref(thm:koossiinusteoreem) on koos skeemi ja
+    valemiga sõnastatud töö käigu teoreetilistes alustes.
 
-2.  **Milline on aatomite ja molekulide mõõtmete suurusjärk kirjanduse põhjal? Kas meie poolt saadud mõõtmiste tulemused on kooskõlas teiste allikate andmetega?**
+2.  **Tuletada valemitest** \@ref(eq:am-om) **ja** \@ref(eq:bm-om)
+    **valem** \@ref(eq:am-bm)**.**
 
-    Kastoorõli kohta molekulvalemiga $C_8H_{35}O_3$ ei leidnud me mitte ühtki kirjandusallikat. Tundub, et ülesande püstituses on tehtud viga ja süsiniku aatomeid on kümne võrra rohkem [@castor-oil]. Riitsinusõli aatomite ja molekulide mõõtmete kohta ei leidnud me kirjandusest üldse mitte midagi. Benjamin Franklin olevat 1770-ndates aastates kallanud teelusika täie oliiviõli tiigi pinnale ja hinnanud, et laialivalgunud õli katnud poole aakri suuruse tiigi pinna, millest järeldanud arvutuste kaudu, et oliiviõli molekuli läbimõõdu suurusjärk olevat $10^{-9} \cdot m$ [@diameter-molecule]. Meie arvutatud suurusjärk on sinnakanti.
-    
-3.  **Mis võib põhjustada meie tulemuste erinevuse teistest allikatest? Kuidas on võimalik parandada katse läbiviimise korrektsust?**
-
-    Üheks põhjuseks võib olla viga ülesande püstituses, mis paistab seisnevat süsiniku aatomite vales arvus riitsinusõli molekulis. Laseme teostada efektiivdiameetri arvutamise valemi põhjal, milles on süsiniku aatomeid 18:
-    
-    ```{r checking}
-determining <- readRDS("determining.rds")
-effective_diameter <- sqrt(pi * determining$`X.d_mean.....d_mean`^2 *
-                             (MOLAR_MASS_C * 18 + MOLAR_MASS_H * 35 +
-                                MOLAR_MASS_O * 3) /
-                             (4 * determining$`X.m.....m` * AVOGADRO))
+    ```{=tex}
+    \begin{equation}
+    \frac{AM}{OM} = \frac{f}{F}
+    (\#eq:am-om)
+    \end{equation}
+    \begin{equation}
+    \frac{BM}{OM} = \frac{q}{Q}
+    (\#eq:bm-om)
+    \end{equation}
+    \begin{equation}
+    \frac{AM}{BM} = \frac{Q}{F}
+    (\#eq:am-bm)
+    \end{equation}
     ```
+    Nii valemis \@ref(eq:am-om) kui \@ref(eq:bm-om) on muutuja *OM*.
+    Avaldan muutuja *OM* kummastki valemist ja panen nende *OM*'de
+    väärtused omavahel võrduma:
 
-    Kui süsiniku aatomeid oleks 18 riitsinusõli molekulis, siis meie esimese katse põhjal oleks riitsinusõli molekuli läbimõõt `r signif(effective_diameter[1], digits <- 5)` * m ja teise katse põhjal `r signif(effective_diameter[2], digits <- 5)` * m. Nii et veidi suurem oleks läbimõõt võrreldes kaheksa süsiniku aatomiga molekulis.
-    
-    Katse läbiviimises me eksimusi ei tuvastanud.
-    
+    ```{=tex}
+    \begin{equation}
+    \frac{AM \cdot F}{f} = \frac{BM * Q}{q}
+    (\#eq:am-f)
+    \end{equation}
+    ```
+    Jagan võrrandis \@ref(eq:am-f) mõlemad pooled *BM*'ga:
+
+    ```{=tex}
+    \begin{equation}
+    \frac{AM \cdot F}{BM \cdot f} = \frac{Q}{q}
+    (\#eq:am-f-1)
+    \end{equation}
+    ```
+    Jagan võrrandis \@ref(eq:am-f-1) mõlemad võrrandi pooled avaldisega
+    $\frac{F}{f}$:
+
+    ```{=tex}
+    \begin{equation}
+    \frac{AM}{BM} = \frac{Q \cdot f}{q \cdot F}
+    (\#eq:am-bm-1)
+    \end{equation}
+    ```
+    Valemid \@ref(eq:am-bm) ja \@ref(eq:am-bm-1) on identsed juhul, kui
+    *f = q*. Muidu valemitest \@ref(eq:am-om) ja \@ref(eq:bm-om) valemit
+    \@ref(eq:am-bm) tuletada ei saa.
+
+3.  **Sõnastada rööpsete jõudude liitmise reegel valemite**
+    \@ref(eq:sum-of-vectors) **ja** \@ref(eq:am-bm) **põhjal.**
+
+    ```{=tex}
+    \begin{equation}
+    \overrightarrow{R} = \overrightarrow{F} + \overrightarrow{Q}
+    (\#eq:sum-of-vectors)
+    \end{equation}
+    ```
+    Asendan valemist \@ref(eq:sum-of-vectors) $\overrightarrow{Q}$
+    valemisse \@ref(eq:am-bm):
+
+    ```{=tex}
+    \begin{equation}
+    \frac{\overrightarrow{AM}}{\overrightarrow{BM}} = \frac{\overrightarrow{R} - \overrightarrow{F}}{\overrightarrow{F}}
+    (\#eq:am-bm-with-r)
+    \end{equation}
+    ```
+    Avaldan võrrandist \@ref(eq:am-bm-with-r) $\overrightarrow{R}$:
+
+    ```{=tex}
+    \begin{flalign}
+    \overrightarrow{R} &= \frac{\overrightarrow{AM} \cdot \overrightarrow{F}}{\overrightarrow{BM}} + \overrightarrow{F} &\\ &= \overrightarrow{F} \cdot (\frac{\overrightarrow{AM}}{\overrightarrow{BM}} + 1)
+    (\#eq:r)
+    \end{flalign}
+    ```
+    Rööpsete jõudude summa on võrdne jõudude rakenduspunktide vahelise
+    maksimaalse kauguse ning väikseima jõu rakenduspunkti ja summa
+    rakenduspunkti vahelise kauguse suhte ja suurima jõu korrutisega.
+
+4.  **Miks jõudude** $R_eksp$ **ja** $R_teor$ **väärtused peaksid olema
+    raskusjõu *P* väärtusele võimalikult sarnased (ideaaljuhul isegi
+    samad)? Põhjendan vastust vastavalt staatika reeglitele. Millest
+    võiks olla tingitud antud katses siiski nende jõudude väärtuste
+    erinevus?**
+
+    Keha on tasakaalupunktis, kui sellele mõjuvate välisjõudude summa on
+    null. Esimeses eksperimendis mõjusid kehale raskusjõud ja kaks
+    tõmbejõudu. Raskusjõud mõjub otse alla. Järelikult peab tõmbejõudude
+    summa mõjuma otse üles ja olema alla mõjuva jõuga võrdse
+    magnituudiga. Kuna minu *P* ja *R*'i väärtused omavahel siiski
+    erinesid, siis järelikult märgistasin eksperimendi kummaski katses
+    paberile punkti(d) ebatäpselt.
+
+5.  **Millest võiks olla tingitud jõudude** $R_eksp$ **ja** $R_teor$
+    **suhteline erinevus?**
+
+    Kui nende kahe muutuja väärtused on erinevad, siis see võinuks
+    tuleneda ebatäpsest mõõtmisest paberjoonise puhul. Kuna ma võrdlesin
+    GeoGebra ja R'i arvutusi, siis erinevusi tulemustes ei saanudki
+    olla.
+
+6.  **Kuigi ideaaljuhul** $\frac{Q}{F} - \frac{AM}{BM} = 0$**, siis
+    katsetulemusel see nii päris ei pruugi olla. Vaadates enda
+    katseandmeid ja katsemetoodikat, millest võiks tulla antud võrduse
+    ligilähedane kehtivus või isegi mittekehtivus? Kust tuleb sisse
+    katseviga?**
+
+    Seda katset oli keeruline läbi viia, kuna tuli varras toppida
+    samasse kohta tagasi ja jätta veel meelde, millised märgistused olid
+    mille jaoks. Arvan, et me ei pannud varrast täpselt tagasi või
+    mõõtsime vale tähistuse suhtes.

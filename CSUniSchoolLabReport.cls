@@ -8,7 +8,7 @@
 %
 % Authors:
 % Vel (vel@latextemplates.com)
-% Linux and Unix Users Group at Virginia Tech Wiki 
+% Linux and Unix Users Group at Virginia Tech Wiki
 %
 % License:
 % CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -30,7 +30,7 @@
 %----------------------------------------------------------------------------------------
 %	REQUIRED PACKAGES AND MISC CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-
+\usepackage{subcaption}
 \usepackage{enumitem} % Required for list customization
 \setlist{partopsep=0pt, topsep=0pt} % Customize spacing around and inside lists
 \renewcommand{\labelenumi}{\alph{enumi}.} % Change numbering in the enumerate environment by letter rather than number
@@ -43,7 +43,7 @@
 
 \usepackage{mhchem} % Package for chemical equation typesetting
 \usepackage{siunitx} % Provides the \SI{}{} and \si{} commands for typesetting technical/scientific SI units correctly
-%\usepackage{amsmath} % Required for some math elements 
+%\usepackage{amsmath} % Required for some math elements
 
 %----------------------------------------------------------------------------------------
 %	MARGINS
@@ -70,7 +70,7 @@
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
-\usepackage{float} 
+\usepackage{float}
 \usepackage{apacite}
 \bibliographystyle{apacite}
 %\usepackage{biblatex}
@@ -135,6 +135,13 @@
     \expandafter\origfigure\expandafter[H]
 } {
     \endorigfigure
+}
+\let\origtable\table
+\let\endorigtable\endtable
+\renewenvironment{table}[1][2] {
+    \expandafter\origtable\expandafter[H]
+} {
+    \endorigtable
 }
 \makeatletter
 % Make all figure use 'h' position by default:
