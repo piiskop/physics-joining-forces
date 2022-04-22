@@ -28,7 +28,7 @@
 
     ```{=tex}
     \begin{equation}
-    \frac{AM \cdot F}{f} = \frac{BM * Q}{q}
+    \frac{AM \cdot F}{f} = \frac{BM \cdot Q}{q}
     (\#eq:am-f)
     \end{equation}
     ```
