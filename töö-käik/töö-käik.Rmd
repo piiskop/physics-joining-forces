@@ -41,11 +41,23 @@ olemas, saab arvutuse teostada. Kuna rööpküliku lähisnurkade summa on
 
 ```{=tex}
 \begin{flalign}
-|\overrightarrow{R}| & = \sqrt{|\overrightarrow{F}|^2 + |\overrightarrow{Q}|^2 - 2 \cdot |\overrightarrow{F}|^2 \cdot |\overrightarrow{Q}|^2 \cdot cos(180° - \alpha)} &\\
-& = \sqrt{|\overrightarrow{F}|^2 + |\overrightarrow{Q}|^2 + 2 \cdot |\overrightarrow{F}|^2 \cdot |\overrightarrow{Q}|^2 \cdot cos(\alpha)}
+|\overrightarrow{R}| & = \sqrt{|\overrightarrow{F}|^2 + |\overrightarrow{Q}|^2 - 2 \cdot |\overrightarrow{F}| \cdot |\overrightarrow{Q}| \cdot cos(180° - \alpha)} &\\
+& = \sqrt{|\overrightarrow{F}|^2 + |\overrightarrow{Q}|^2 + 2 \cdot |\overrightarrow{F}| \cdot |\overrightarrow{Q}| \cdot cos(\alpha)}.
 (\#eq:cosine-theorem)
 \end{flalign}
+
 ```
+
+Teostan valemile \@ref(eq:cosine-theorem) dimensionaalanalüüsi:
+
+```{=tex}
+\begin{flalign}
+\sqrt{|\frac{M \cdot L}{T^2}|^2 + |\frac{M \cdot L}{T^2}|^2 - 2 \cdot |\frac{M \cdot L}{T^2}| \cdot |\frac{M \cdot L}{T^2}|} = \frac{M \cdot L}{T^2}.
+(\#eq:dimensional-analysis-for-cosine-theorem)
+\end{flalign}
+
+```
+
 Üks vektoriaalne suurus on gravitatsioonist tingitud standardkiirendus.
 Korduvates katsetes aastates 1995 - 2017 mõõdeti selleks Suurupis iga
 kord $9.8182 \cdot \frac{m}{s^2}$ [@oja2021absolute].

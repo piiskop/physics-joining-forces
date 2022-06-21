@@ -218,6 +218,8 @@ Andmeanalüüs esimese praktilise osa kohta:
       ) %>% column_spec(1, width = ".5cm") %>% column_spec(9, width = "2cm") %>% column_spec(10, width = "2cm")
     }
     ```
+    
+    Tabelis \@ref(tab:comparing-theoretical-forces-to-actual-applied-to-same-point) on muuseas esitatud eksperimentaalse ja teoreetilise jõu väärtused. Täpsem on eksperimentaalne ehk katseliselt kindlaks tehtud väärtus, sest teoreetilise jaoks on mitu sisendit, millest igaüks on ebatäpne.
 
 Andmeanalüüs teise praktilise osa kohta:
 

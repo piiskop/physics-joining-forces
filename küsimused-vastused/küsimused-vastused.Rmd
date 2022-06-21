@@ -82,8 +82,25 @@
     Rööpsete jõudude summa on võrdne jõudude rakenduspunktide vahelise
     maksimaalse kauguse ning väikseima jõu rakenduspunkti ja summa
     rakenduspunkti vahelise kauguse suhte ja suurima jõu korrutisega.
-
-4.  **Miks jõudude** $R_eksp$ **ja** $R_teor$ **väärtused peaksid olema
+    
+    Kui visata pilk joonisele \@ref(fig:adding-parallel-forces), siis rõhtne telg kujutab endast justkui varrast, mille kohtadesse $A$ ja $B$ on kinnitatud erineva massiga esemed, nii et gravitatsioonijõud, mis nendele punktidele mõjub, on erinev olles vastavalt $\vec{F}$ ja $\vec{Q}$. Võime ka ette kujutada, et tegemist on plokkflöödiga, mille üks ots on jämedam ja seega ka raskem. Jämedam ots on $B$. Selle flöödi raskuskese on punktis $M$. Kummalegi otsale mõjuvad jõud, mis on suunatud mitte üksnes alla, vaid ka horisontaalselt vasakule ja paremale. Kui need punktid $A$ ja $B$ asuvad pilli otstes ja raskuskese on $M$, siis on rõhtsad jõud võrdsed ja üksteist tühistavad, mistõttu summaarne jõud on magnituudi poolest võrdne kummalegi otsale mõjuva jõu magnituudi summaga. Summaarse jõu suund on sama jõudude $\vec{F}$ ja $\vec{Q}$ suund. Summaarse jõu rakenduspunkt, et see pill jääks rõhtsalt mingile teljele, mis asub selle raskuskeskmes, püsima, on see raskuskese $M$. Sinna on see summaarne jõud rakendatud. Kui seda rakendada ühele või teisele poole, vajuks pill viltu. Kuidas selle raskuskeskme, mida nimetatakse ka jõu õlaks, kaugust kummastki punktist arvutada, kui on teada kummagi jõu suurus?
+    
+    ```{r label = "adding-parallel-forces", fig.cap = "Rööpsete jõudude liitmine.", fig.margin = TRUE}
+    include_svg(file.path("küsimused-vastused", "adding-parallel-forces.svg"))
+    ```
+    
+    Vektorite $\vec{f}$ ja $\vec{F}$ summa on $\vec{F'}$. Kui mööda viimase sihti seda vektorit nihutada ja rakendada see püstise telje külge ning teha paremal pool vektoriga $\vec{Q'}$ sama, rakenduvad need ühisesse alguspunkti, sest süsteem on tasakaalus. Neid sihte nimetatakse jõu mõjusirgeteks. Nende vektorite uuest alguspunktist otse alla rõhtsale teljele liikudes jõuamegi punkti $M$.
+    
+    Kuna $\vec{F}$ ja $\vec{Q}$ mõjuvad otse alla ning $\vec{f}$ ja $\vec{q}$ nendega risti, siis need oma resultantjõudude komponentidena koos resultantjõududega moodustavad täisnurksed kolmnurgad. See tähendab, et kolmnurgad on $OMA$ ja $A\vec{F}\vec{f}$ on sarnased nagu ka kolmnurgad $OMB$ ja $B\vec{Q}\vec{q}$ on omavahel sarnased. Sarnaste kolmnurkade vastavate külgede suhted on samad. Seega $\frac{AM}{|\vec{f}|} = \frac{OM}{|\vec{F}|}$ ja $\frac{MB}{|\vec{q}|} = \frac{OM}{|\vec{Q}|}$. Kuna $|\vec{f}| = |\vec{q}|$, siis $\frac{MB}{|\vec{f}|} = \frac{OM}{|\vec{Q}|}$ ehk $|\vec{f}| \cdot OM = MB \cdot |\vec{Q}|$, mistõttu $MB \cdot |\vec{Q}| = AM \cdot |\vec{F}|$, mis ongi rööpsete jõudude liitmise reegel See tähendab, et jõudude magnituudide ja nende rakenduspunktide vastavate jõu õlgade korrutiste summa on null. GeoGebras tehtud joonisel \@ref(fig:adding-parallel-forces) on näidatud ka pikkusühikud. Lasen teha kontrolli:
+    
+    ```{r}
+    sum_of_forces <- 16.6919388457803 * -17.3 + 9.8 * 29.46638184
+    
+    ```
+    
+    Summa ongi `r sum_of_forces`.
+    
+4.  **Miks jõudude** $R_{eksp}$ **ja** $R_{teor}$ **väärtused peaksid olema
     raskusjõu *P* väärtusele võimalikult sarnased (ideaaljuhul isegi
     samad)? Põhjendan vastust vastavalt staatika reeglitele. Millest
     võiks olla tingitud antud katses siiski nende jõudude väärtuste
@@ -97,13 +114,11 @@
     erinesid, siis järelikult märgistasin eksperimendi kummaski katses
     paberile punkti(d) ebatäpselt.
 
-5.  **Millest võiks olla tingitud jõudude** $R_eksp$ **ja** $R_teor$
+5.  **Millest võiks olla tingitud jõudude** $R_{eksp}$ **ja** $R_{teor}$
     **suhteline erinevus?**
 
     Kui nende kahe muutuja väärtused on erinevad, siis see võinuks
-    tuleneda ebatäpsest mõõtmisest paberjoonise puhul. Kuna ma võrdlesin
-    GeoGebra ja R'i arvutusi, siis erinevusi tulemustes ei saanudki
-    olla.
+    tuleneda ebatäpsest mõõtmisest paberjoonise puhul. Samuti sõltub täpsus arvutussüsteemi täpsusest ja selle reeglitest, milles võib olla erinevusi GeoGebra ja R'i vahel.
 
 6.  **Kuigi ideaaljuhul** $\frac{Q}{F} - \frac{AM}{BM} = 0$**, siis
     katsetulemusel see nii päris ei pruugi olla. Vaadates enda
